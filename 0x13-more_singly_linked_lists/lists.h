@@ -15,8 +15,8 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 
-int print_listint(const listint_t *h);
-int listint_len(const listint_t *h);
+int print_listint(const listint_t *headnode);
+int listint_len(const listint_t *headnode);
 listint_t *add_nodeint(listint_t **headnode, const int n);
 listint_t *add_nodeint_end(listint_t **headnode, const int n);
 void free_listint(listint_t *headnode);
@@ -28,7 +28,7 @@ listint_t *insert_nodeint_at_index(listint_t **headnode, unsigned int idx, int n
 int delete_nodeint_at_index(listint_t **headnode, unsigned int index);
 listint_t *reverse_listint(listint_t **headnode);
 int print_listint_safe(const listint_t *headnode);
-int free_listint_safe(listint_t **h);
+int free_listint_safe(listint_t **headnode);
 listint_t *find_listint_loop(listint_t *headnode);
 
 #endif
